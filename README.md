@@ -33,12 +33,17 @@ From the repo root:
 ```bash
 cd /workspaces/data-engineering-zoomcamp/pipeline
 pip install uv
+```
 Now initialize a Python project with uv:
+```
 uv init --python=3.13
+```
+
 Adding Dependencies
 Now let's add pandas:
-
+```
 uv add pandas pyarrow
+```
 This adds pandas to your pyproject.toml and installs it in the virtual environment.
 
 
@@ -69,8 +74,9 @@ Use this interpreter path:
 Running the Pipeline
 Now we can execute the file:
 
+```
 uv run python pipeline.py 10
-
+```
 ## 4. Dockerfile Used
 
 The Docker image is built from `pipeline/Dockerfile`.
