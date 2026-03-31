@@ -14,13 +14,13 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 
 Languages and Scripting: Python, SQL, Scala, PySpark, Snowpark, T-SQL
 
-Big Data and Processing: Apache Spark, PySpark, Databricks, Hadoop
+Big Data and Processing: Apache Spark, PySpark, Databricks
 
-Data Warehousing and Lakes: Snowflake, Azure Synapse, BigQuery, Redshift, Delta Lake, ADLS Gen2
+Data Warehousing and Lakes: Snowflake, Azure Synapse, Delta Lake, ADLS Gen2
 
 ETL and Orchestration: Azure Data Factory, dbt, Apache Airflow, Kestra, SSIS
 
-Cloud Platforms: Microsoft Azure (ADLS Gen2, Databricks, Synapse, Key Vault, Azure ML), AWS (S3, Glue), GCP (BigQuery)
+Cloud Platforms: Microsoft Azure (ADLS Gen2, Databricks, Synapse, Key Vault, Azure ML)
 
 Data Modeling: Dimensional Modeling, Star Schema, Snowflake Schema, Data Vault
 
@@ -28,7 +28,7 @@ Data Quality and Observability: dbt tests, Great Expectations, automated validat
 
 Infrastructure and DevOps: Docker, Kubernetes, Terraform, Git, CI/CD, Azure DevOps
 
-Analytics and BI: Power BI, SSRS, SSAS
+Analytics and BI: Power BI, SSRS, SSAS, Qlik
 
 Methodologies: Agile, Scrum, Technical Documentation, Stakeholder Management, Communication
 
@@ -124,4 +124,3 @@ Goa University | Goa, India | 2015 – 2019
 ## LANGUAGES
 
 - English: Fluent / Professional
-- [TO BE FILLED BY CANDIDATE: Additional languages if applicable]
