@@ -6,6 +6,19 @@
 Docker helps isolate software from the host machine.
 We can use a container to run our project with its own Python and dependencies.
 
+Why Docker?
+Docker provides the following advantages:
+
+Reproducibility: Same environment everywhere
+Isolation: Applications run independently
+Portability: Run anywhere Docker is installed
+They are used in many situations:
+
+Integration tests: CI/CD pipelines
+Running pipelines on the cloud: AWS Batch, Kubernetes jobs
+Spark: Analytics engine for large-scale data processing
+Serverless: AWS Lambda, Google Functions
+
 `venv` isolates Python packages for one project, but it still uses your machine's operating system.
 Docker isolates the whole application environment, including OS-level setup, Python, dependencies, and code.
 
