@@ -32,8 +32,16 @@ From the repo root:
 
 ```bash
 cd /workspaces/data-engineering-zoomcamp/pipeline
-python3 -m venv .venv
-source .venv/bin/activate
+pip install uv
+Now initialize a Python project with uv:
+uv init --python=3.13
+Adding Dependencies
+Now let's add pandas:
+
+uv add pandas pyarrow
+This adds pandas to your pyproject.toml and installs it in the virtual environment.
+
+
 ```
 
 ## 2. Set The VS Code Interpreter
@@ -58,12 +66,10 @@ Use this interpreter path:
 
 ## 3. Run The Python File Locally
 
-From the `pipeline` folder:
+Running the Pipeline
+Now we can execute the file:
 
-```bash
-source .venv/bin/activate
-python pipeline.py 9
-```
+uv run python pipeline.py 10
 
 ## 4. Dockerfile Used
 
