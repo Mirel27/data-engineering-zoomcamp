@@ -2,25 +2,24 @@
 # coding: utf-8
 
 
+import click
 import pandas as pd
+from sqlalchemy import create_engine
 from tqdm.auto import tqdm
 
-def run():
-
-    year = 2021
-    month = 1
-
-    pg_user =  'root'
-    pg_pass = 'root'
-    pg_host = 'localhost'
-    pg_port = '5432'
-    pg_db = 'ny_taxi'   
-
-    chunksize = 100000
-
-    target_table = 'yellow_taxi_data'
+@click.command()
+@click.option("--year", default=2021, type=int, show_default=True)
+@click.option("--month", default=1, type=int, show_default=True)
+@click.option("--pg-user", default="root", show_default=True)
+@click.option("--pg-pass", default="root", show_default=True)
+@click.option("--pg-host", default="localhost", show_default=True)
+@click.option("--pg-port", default=5432, type=int, show_default=True)
+@click.option("--pg-db", default="ny_taxi", show_default=True)
+@click.option("--chunksize", default=100000, type=int, show_default=True)
+@click.option("--target-table", default="yellow_taxi_data", show_default=True)
+def run(year, month, pg_user, pg_pass, pg_host, pg_port, pg_db, chunksize, target_table):
     # Read a sample of the data
-    prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/'
+    prefix = "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/"
 
 
     dtype = {
@@ -47,26 +46,25 @@ def run():
         "tpep_dropoff_datetime"
     ]
 
-    #connection to postgress
-    from sqlalchemy import create_engine
-    engine = create_engine(f'postgresql+psycopg2://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}')
+    engine = create_engine(
+        f"postgresql+psycopg2://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}"
+    )
 
 
     df_iter = pd.read_csv(
-        prefix + f'yellow_tripdata_{year}-{month:02d}.csv.gz',
+        prefix + f"yellow_tripdata_{year}-{month:02d}.csv.gz",
         dtype=dtype,
         parse_dates=parse_dates,
-        iterator = True,
-        chunksize = chunksize,
+        iterator=True,
+        chunksize=chunksize,
     )
 
     first = True
     for df in tqdm(df_iter):
         if first:
-            df.head(n=0).to_sql(name=target_table,con=engine,if_exists='replace')
-            #Create schema
-            first=False
-        df.to_sql(name=target_table,con=engine,if_exists='append')
+            df.head(n=0).to_sql(name=target_table, con=engine, if_exists="replace")
+            first = False
+        df.to_sql(name=target_table, con=engine, if_exists="append")
 
 
 if __name__ == "__main__":
