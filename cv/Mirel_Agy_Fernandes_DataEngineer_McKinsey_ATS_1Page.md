@@ -68,5 +68,5 @@ Snowflake Data Engineer (2025) | dbt Fundamentals (2025) | Azure Data Engineer A
 
 ## ACHIEVEMENTS & LANGUAGES
 
-- 🥈 2nd place — GitHub Copilot Hack Tour (data profiling PoC)
+- 2nd place — GitHub Copilot Hack Tour (data profiling PoC)
 - English: Fluent / Professional
