@@ -115,7 +115,7 @@ Goa University | Goa, India | 2015 – 2019
 
 ## ACHIEVEMENTS
 
-- 🥈 Secured 2nd place at the GitHub Copilot Hack Tour, collaborating with a cross-functional team to design and build an impactful data profiling proof-of-concept using GitHub Copilot.
+- Secured 2nd place at the GitHub Copilot Hack Tour, collaborating with a cross-functional team to design and build an impactful data profiling proof-of-concept using GitHub Copilot.
 
 ---
 
