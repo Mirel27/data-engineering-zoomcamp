@@ -12,9 +12,9 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 
 ## TECHNICAL SKILLS
 
-Languages and Scripting: Python, SQL, Scala, PySpark, Snowpark, T-SQL
+Languages and Scripting: Python, SQL, Scala, PySpark, Snowpark, T-SQL, R
 
-Big Data and Processing: Apache Spark, PySpark, Databricks
+Big Data and Processing: Apache Spark, PySpark, Databricks, MapReduce
 
 Data Warehousing and Lakes: Snowflake, Azure Synapse, Delta Lake, ADLS Gen2
 
@@ -30,7 +30,9 @@ Infrastructure and DevOps: Docker, Kubernetes, Terraform, Git, CI/CD, Azure DevO
 
 Analytics and BI: Power BI, SSRS, SSAS, Qlik, Matplotlib
 
-NLP and Data Science Libraries: pandas, spaCy, NLTK, NumPy
+NLP and Data Science Libraries: pandas, spaCy, NLTK, NumPy, TensorFlow, BERT, SHAP
+
+Machine Learning: Binary Classification, Feature Engineering, Multivariate Regression, Model Interpretability
 
 Methodologies: Agile, Scrum, Technical Documentation, Stakeholder Management, Communication
 
@@ -93,6 +95,39 @@ Delivered developer support across multiple projects for international clients i
 **2025 – 2026 | GitHub: github.com/Mirel27/data-engineering-zoomcamp**
 
 Architected and delivered end-to-end data pipeline solutions spanning containerization (Docker), workflow orchestration (Kestra/Airflow), cloud data warehousing (BigQuery/GCP), batch processing (Apache Spark/dbt), and streaming (Kafka/Flink), demonstrating production-grade data engineering capabilities.
+
+---
+
+### NLP Classification Pipeline: Mining Text vs Speech for Depression Diagnosis | MSc Research Project
+**May 2023 – Sep 2023 | University of Sheffield | GitHub: github.com/Mirel27/Mining-Text-Versus-Speech-Exploring-Classification-Models-for-Depression-Diagnosis**
+
+- Designed and implemented a scalable data pipeline integrating YouTube Data API, Selenium, and BeautifulSoup for automated retrieval of mental health vlogs using keyword filters, with ephemeral storage and automatic data deletion to ensure GDPR and ethics compliance.
+- Developed automated scraping scripts with robust logging and error handling; applied rule-based text cleaning algorithms to preprocess highly unstructured YouTube vlog transcripts.
+- Utilised Python in Databricks to fine-tune pretrained transformer models (BERT, MentalBERT, MentalRoBERTa, ClimateBERT) on multimodal datasets from Reddit and YouTube using TensorFlow.
+- Achieved F1 score of 0.967 on Reddit data (MentalRoBERTa); conducted SHAP interpretability analysis to identify domain-specific vocabulary shifts between written and spoken language datasets.
+
+**Technologies:** Python, Databricks, TensorFlow, BERT, SHAP, YouTube Data API, Selenium, BeautifulSoup, NLP
+
+---
+
+### Big Data: Exploring Job-Technology Skill Relationships | MSc Academic Project
+**Feb 2023 – Jun 2023 | University of Sheffield | GitHub: github.com/Mirel27/Big-Data-Exploring-Job-Technology-Skill-Relationships**
+
+- Integrated data from multiple sources (CSV and O*NET) using Databricks to analyse relationships between job descriptions and in-demand technological skills.
+- Utilised DataFrames, RDD, SQL, and MapReduce in Databricks for scalable data processing and analysis.
+- Performed data manipulation and skill pattern analysis to identify trends and correlations across job market datasets.
+
+**Technologies:** Python, Databricks, Spark DataFrames, RDD, SQL, MapReduce
+
+---
+
+### COVID-19 Lockdown Impact on Insomnia and Anxiety Levels in the UK | MSc Academic Project
+**Sep 2022 – Jan 2023 | University of Sheffield | GitHub: github.com/Mirel27/COVID19-UK-Insomnia-Anxiety-Impact-Analysis**
+
+- Extracted and cleaned data from multiple sources (Our World in Data COVID-19 dataset, Mental Health Search Terms dataset) using R, handling missing values, type conversion, and normalisation.
+- Applied feature selection techniques (correlation and variance analysis) and performed multivariate regression to explore the relationship between COVID-19 lockdown measures and insomnia/anxiety levels.
+
+**Technologies:** R, Feature Engineering, Data Wrangling, Multivariate Regression
 
 ---
 
