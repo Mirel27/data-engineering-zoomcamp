@@ -17,6 +17,7 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 **ETL & Orchestration:** dbt, Azure Data Factory, Apache Airflow, Kestra, SSIS
 **Data Quality:** dbt tests, Great Expectations, automated validation, PII/GDPR compliance
 **DevOps:** Docker, Kubernetes, Terraform, Git, CI/CD, Azure DevOps | **BI:** Power BI, Qlik, SSRS
+**Analytics & ML Libraries:** pandas, NumPy, spaCy, NLTK, TensorFlow, BERT, SHAP, scikit-learn
 
 ---
 
@@ -27,10 +28,12 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 
 - Designed and deployed scalable ETL/ELT pipelines extracting EHR data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via Snowpark, supporting 20+ research projects.
 - Engineered a clinical notes anonymisation pipeline using Apache Spark and a BERT-based transformer (MMIC-4 standard), achieving 99.9% de-identification accuracy on millions of records.
-- Built an automated data validation framework (Snowpark) validating 180M records (20 columns) in 1 minute with 100% PII leakage prevention.
-- Developed dbt transformation logic, tests, and macros supporting full and incremental loads with automated regression testing in CI/CD.
+- Built an automated data validation framework (Snowpark) validating 180M records (20 columns) in 1 minute with 100% PII leakage prevention, ensuring ML-ready data quality.
+- Authored dbt transformation logic, test cases, and macros supporting both full and incremental loads, applying data quality checks and automated regression testing as part of the CI/CD pipeline.
+- Developed analytical models using pandas, spaCy, NLTK, and NumPy as the basis for Qlik and Matplotlib visualisations delivered to Data Scientists and research teams for data verification.
 - Leveraged Azure ML with GPT-4.0 API to extract insights from Snowflake data for automated discharge summary generation.
 - Enriched structured fields using Snowflake Cortex, increasing population from 60% to 90%; developed linkage models achieving 98% accuracy.
+- Collaborated with clinical researchers, Data Scientists, data protection officers, and senior stakeholders to translate technical outputs into business and research value.
 
 ### Senior System Developer / Azure Data Engineer | Infosys Limited
 **November 2019 – April 2022 | Bangalore, India** *(Clients: MetLife, Citi, Apple)*
@@ -44,8 +47,8 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 
 ## SELECTED PROJECTS
 
-- **End-to-End Data Engineering Portfolio (2025–2026):** Docker, Kestra/Airflow, BigQuery/GCP, Spark, dbt, Terraform — [github.com/Mirel27/data-engineering-zoomcamp](https://github.com/Mirel27/data-engineering-zoomcamp)
-- **NLP Depression Diagnosis Pipeline (MSc, 2023):** Fine-tuned BERT/MentalRoBERTa on Reddit & YouTube data; F1 = 0.967; SHAP interpretability analysis. Python, Databricks, TensorFlow.
+- **End-to-End Data Engineering Portfolio (2025–2026):** Reproducible pipelines — Docker, Kestra/Airflow, BigQuery/GCP, Spark, dbt, Terraform — [github.com/Mirel27/data-engineering-zoomcamp](https://github.com/Mirel27/data-engineering-zoomcamp)
+- **NLP Depression Diagnosis Pipeline (MSc, 2023):** Data prep and fine-tuning of BERT/MentalRoBERTa on Reddit & YouTube data for ML classification; F1 = 0.967; SHAP interpretability analysis. Python, Databricks, TensorFlow.
 
 ---
 
