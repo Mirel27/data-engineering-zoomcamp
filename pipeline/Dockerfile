@@ -22,4 +22,4 @@ COPY  ingest_data.py .
 RUN  uv sync --locked #--locked flag ensures that the exact versions of the dependencies specified in the uv.lock file are installed, which helps to ensure consistency and reproducibility of the environment.
 
 COPY pipeline.py .
-ENTRYPOINT ["python", "pipeline.py"]
+ENTRYPOINT ["python", "ingest_data.py"]

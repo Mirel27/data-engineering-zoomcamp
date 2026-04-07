@@ -15,3 +15,90 @@ docker run -it --rm \
   --pg-port=5432 \
   --pg-db=ny_taxi \
   --target-table=yellow_taxi_trips
+
+docker run -d --name pgdatabase \
+  --network=pg-network \
+  -e POSTGRES_USER=root \
+  -e POSTGRES_PASSWORD=root \
+  -e POSTGRES_DB=ny_taxi \
+  -v ny_taxi_postgres_data:/var/lib/postgresql \
+  -p 5432:5432 \
+  postgres:18
+
+  docker run -it \
+  --network=pg-network \
+  taxi_ingest:v001 \
+    --pg-user=root \
+    --pg-pass=root \
+    --pg-host=pgdatabase \
+    --pg-port=5432 \
+    --pg-db=ny_taxi \
+    --target-table=yellow_taxi_trips_2021_1\
+    --chunksize=100000
+
+-- Remove older versions
+docker rm pgdatabase zen_bose pedantic_hermann
+
+docker volume rm ny_taxi_postgres_data
+
+-- Step 1: Create the Docker network
+docker network create pg-network
+
+-- Step 2: Start Postgres on pg-network
+-- Volume mounts at /var/lib/postgresql (not /data) because Postgres 18 manages the subdirectory itself
+docker run -d --name pgdatabase \
+  --network=pg-network \
+  -e POSTGRES_USER=root \
+  -e POSTGRES_PASSWORD=root \
+  -e POSTGRES_DB=ny_taxi \
+  -v ny_taxi_postgres_data:/var/lib/postgresql \
+  -p 5433:5432 \
+  postgres:18
+
+-- Step 3: Check Postgres is running
+docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Networks}}'
+
+-- Step 4: Run the ingest container
+-- pg-port is 5432 because inside the network containers talk on the internal port
+docker run -it \
+  --network=pg-network \
+  taxi_ingest:v001 \
+  --pg-user=root \
+  --pg-pass=root \
+  --pg-host=pgdatabase \
+  --pg-port=5432 \
+  --pg-db=ny_taxi \
+  --target-table=yellow_taxi_trips_2021_1 \
+  --chunksize=100000
+
+-- Step 5: Connect with pgcli from the host (uses port 5433 because that is the published port)
+uv run pgcli -h localhost -p 5433 -u root -d ny_taxi
+
+-- Cleanup: stop and remove containers, volume, and network
+docker stop pgdatabase
+docker rm pgdatabase
+docker volume rm ny_taxi_postgres_data
+docker network rm pg-network
+
+#inside port 80 outside 8085
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -v pgadmin_data:/var/lib/pgadmin \
+  -p 8085:80 \
+  --network=pg-network \
+  --name pgadmin \
+  dpage/pgadmin4
+
+  docker network ls
+
+  docker run -it \
+  --network=pipeline_default \
+  taxi_ingest:v001 \
+  --pg-user=root \
+  --pg-pass=root \
+  --pg-host=pgdatabase \
+  --pg-port=5432 \
+  --pg-db=ny_taxi \
+  --target-table=yellow_taxi_trips_2021_1 \
+  --chunksize=100000

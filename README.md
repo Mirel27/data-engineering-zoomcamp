@@ -1,147 +1,56 @@
-## Simple Workflow
+## Data Engineering Zoomcamp - Learning Project
 
-![alt text](image.png)
+Project status: In progress.
 
+This is a learning repo where I am building an end-to-end data engineering workflow step by step.
 
-Docker helps isolate software from the host machine.
-We can use a container to run our project with its own Python and dependencies.
+![Simple workflow](image.png)
 
-Why Docker?
-Docker provides the following advantages:
+## Architecture
 
-Reproducibility: Same environment everywhere
-Isolation: Applications run independently
-Portability: Run anywhere Docker is installed
-They are used in many situations:
+Data source (NYC taxi CSV) -> Python ingest script -> PostgreSQL -> pgAdmin
 
-Integration tests: CI/CD pipelines
-Running pipelines on the cloud: AWS Batch, Kubernetes jobs
-Spark: Analytics engine for large-scale data processing
-Serverless: AWS Lambda, Google Functions
+## Why Docker + venv
 
-`venv` isolates Python packages for one project, but it still uses your machine's operating system.
-Docker isolates the whole application environment, including OS-level setup, Python, dependencies, and code.
+`venv` isolates Python packages for one project, but still uses the host OS.
+Docker isolates the full runtime environment (OS layer, Python, packages, code).
 
+## Why Docker Compose
 
+Docker Compose lets this project start multiple services together with one command.
+It keeps service names, networks, ports, and volumes in one file so the setup is reproducible and easier to run.
 
-## 1. Create The Environment
-
-A virtual environment keeps this project's Python packages separate from the global Python on the machine.
-
-From the repo root:
+## Quickstart (5 Commands)
 
 ```bash
 cd /workspaces/data-engineering-zoomcamp/pipeline
-pip install uv
-```
-Now initialize a Python project with uv:
-```
-uv init --python=3.13
-```
-
-Adding Dependencies
-Now let's add pandas:
-```
-uv add pandas pyarrow
-```
-This adds pandas to your pyproject.toml and installs it in the virtual environment.
-
-
+docker compose up -d
+docker build -t taxi_ingest:v001 .
+docker run -it --network=pipeline_default taxi_ingest:v001 --pg-user=root --pg-pass=root --pg-host=pgdatabase --pg-port=5432 --pg-db=ny_taxi --target-table=yellow_taxi_trips_2021_1 --chunksize=100000
+uv run pgcli -h localhost -p 5433 -u root -d ny_taxi
 ```
 
-## 2. Set The VS Code Interpreter
+## Local Development
 
-Open the Command Palette:
+Use this interpreter in VS Code:
 
-```text
-Ctrl+Shift+P
-```
+`/workspaces/data-engineering-zoomcamp/pipeline/.venv/bin/python`
 
-Then choose:
-
-```text
-Python: Select Interpreter
-```
-
-Use this interpreter path:
-
-```text
-/workspaces/data-engineering-zoomcamp/pipeline/.venv/bin/python
-```
-
-## 3. Run The Python File Locally
-
-Running the Pipeline
-Now we can execute the file:
-
-```
-uv run python pipeline.py 10
-```
-## 4. Dockerfile Used
-
-The Docker image is built from `pipeline/Dockerfile`.
-
-It does these things:
-
-- starts from `python:3.13.11-slim`
-- copies the `uv` binary into the image
-- copies `pyproject.toml`, `.python-version`, and `uv.lock`
-- runs `uv sync --locked`
-- copies `pipeline.py`
-- starts with `python pipeline.py`
-
-## 5. Build The Docker Image
-
-From the `pipeline` folder:
+Run local scripts with:
 
 ```bash
 cd /workspaces/data-engineering-zoomcamp/pipeline
-docker build -t test:pandas .
+uv run python ingest_data.py --help
 ```
 
-Meaning:
+## Roadmap
 
-- `test` is the image name
-- `pandas` is the image tag
-
-## 6. Run The Docker Image
-
-Run the script in the container:
-
-```bash
-docker run --rm test:pandas 9
-```
-
-If you want an interactive terminal attached too:
-
-```bash
-docker run -it --rm test:pandas 9
-```
-
-This is equivalent to running:
-
-```bash
-python pipeline.py 9
-```
-
-inside the container.
-
-## 7. Open A Shell Inside The Container
-
-If you want to go inside the container instead of directly running the script:
-
-```bash
-docker run -it --rm --entrypoint bash test:pandas
-```
-
-## Commands To Remember
-
-```bash
-cd /workspaces/data-engineering-zoomcamp/pipeline
-python3 -m venv .venv
-source .venv/bin/activate
-python pipeline.py 9
-docker build -t test:pandas .
-docker run --rm test:pandas 9
-docker run -it --rm --entrypoint bash test:pandas
-```
+- [x] Containerized PostgreSQL setup
+- [x] Parameterized ingestion script with Click
+- [x] Docker image for ingestion job
+- [x] Docker Compose for Postgres + pgAdmin
+- [ ] Add logging and retry handling
+- [ ] Add data quality checks
+- [ ] Add tests for ingestion flow
+- [ ] Add orchestration (Airflow/Prefect)
+- [ ] Add CI pipeline
