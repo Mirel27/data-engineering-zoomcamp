@@ -6,7 +6,7 @@ mirelagy27@gmail.com | +44 7867093713 | linkedin.com/in/mirel-agy-fernandes | Lo
 
 ## PROFESSIONAL SUMMARY
 
-Data Engineer with 5+ years of experience designing scalable data platforms and building distributed ETL/ELT pipelines using Apache Spark, Snowflake, Azure, and dbt. Proven expertise processing lar[...]  
+Data Engineer with 5+ years of experience designing scalable data platforms and building distributed ETL/ELT pipelines using Apache Spark, Snowflake, Azure, and dbt. Proven expertise processing large-scale clinical and financial datasets, implementing PII/GDPR-compliant data solutions, and delivering measurable performance improvements. Adept at collaborating with cross-functional teams, translating complex data requirements into robust engineering solutions, and driving data quality and observability across the full data lifecycle.
 
 ---
 
@@ -36,42 +36,42 @@ Methodologies: Agile, Scrum, Technical Documentation, Stakeholder Management, Co
 
 ## PROFESSIONAL EXPERIENCE
 
-### Data Engineer | Imperial College Healthcare NHS Trust / Imperial College London  
+### Data Engineer | Imperial College Healthcare NHS Trust / Imperial College London
 **March 2024 – Present | London, United Kingdom**
 
-- Designed and deployed scalable ETL/ELT pipelines to extract Electronic Health Record (EHR) data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via [...]  
-- Engineered a high-performance clinical notes anonymization pipeline using Apache Spark DataFrames, Snowflake Modin, and a BERT-based transformer model (MMIC-4 deidentification standard), achievi[...]  
-- Built an automated data validation framework using Snowpark that validates 180M records (20 columns) in 1 minute, achieving 100% PII leakage prevention with near-zero human intervention across d[...]  
+- Designed and deployed scalable ETL/ELT pipelines to extract Electronic Health Record (EHR) data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via Azure Data Factory, supporting clinical research across multiple NHS and academic projects.
+- Engineered a high-performance clinical notes anonymization pipeline using Apache Spark DataFrames, Snowflake Modin, and a BERT-based transformer model (MMIC-4 deidentification standard), achieving 2x throughput improvement and processing 500K+ records per run.
+- Built an automated data validation framework using Snowpark that validates 180M records (20 columns) in 1 minute, achieving 100% PII leakage prevention with near-zero human intervention across data pipelines.
 - Developed data models for 3 research projects including maternity and fetal linkage models (98% accuracy), reducing query times by 25% through strategic cluster key implementation in Snowflake.
 - Authored dbt transformation logic, test cases, and macros supporting both full and incremental loads, applying data quality checks and automated regression testing as part of the CI/CD pipeline.
 - Built fail-safe incremental loading framework with restart capability, handling Snowflake 16MB record-length limits via dynamic free-text splitting and fault-tolerant monitoring.
-- Leveraged Azure Machine Learning with GPT-4.0 API to extract insights from Snowflake data for automated discharge summary generation, measuring completeness, accuracy, readability, and bias of c[...]  
+- Leveraged Azure Machine Learning with GPT-4.0 API to extract insights from Snowflake data for automated discharge summary generation, measuring completeness, accuracy, readability, and bias of clinical documentation.
 - Developed end-to-end monitoring, logging, and alerting dashboards to provide transparency into pipeline health and ensure consistent, reliable pipeline execution.
-- Collaborated effectively with a diverse cross-functional team including clinical researchers, clinicians, data scientists, data protection officers, ethics committees, and funders, ensuring deve[...]  
+- Collaborated effectively with a diverse cross-functional team including clinical researchers, clinicians, data scientists, data protection officers, ethics committees, and funders, ensuring delivery aligned with NHS governance and GDPR standards.
 - Managed code deployments and project priorities using Azure DevOps with CI/CD pipelines, applying Agile sprint methodology throughout.
 
-**Key Project Highlights:**  
-- Enriched structured fields by extracting data points from free-text using Snowflake Cortex, increasing structured field population from 60% to 90%.  
+**Key Project Highlights:**
+- Enriched structured fields by extracting data points from free-text using Snowflake Cortex, increasing structured field population from 60% to 90%.
 - Implemented rule-based and ML-based data quality automation, enabling researchers to access validated, de-identified clinical datasets in a safe data environment.
 
 ---
 
-### Graduate Teaching Assistant (GTA) — Management Research (Quantitative Analysis)  
+### Graduate Teaching Assistant (GTA) — Management Research (Quantitative Analysis)
 **The University of Sheffield | March 2023 – September 2023 | Sheffield, United Kingdom**
 
-- Provided expertise in statistical analysis (SPSS) to support 154 postgraduate students across MSc Management and MSc Management (International Business) programs.  
-- Conducted data cleaning, manipulation, and analysis to enhance accuracy and derive meaningful insights from research datasets.  
-- Led lab sessions on data analysis and delivered personal tutoring to 20 students, ensuring clarity on technical statistical concepts.  
+- Provided expertise in statistical analysis (SPSS) to support 154 postgraduate students across MSc Management and MSc Management (International Business) programs.
+- Conducted data cleaning, manipulation, and analysis to enhance accuracy and derive meaningful insights from research datasets.
+- Led lab sessions on data analysis and delivered personal tutoring to 20 students, ensuring clarity on technical statistical concepts.
 - Collaborated with the module coordinator to plan sessions, track student progress, and provide structured feedback on performance.
 
 ---
 
-### Senior System Developer / Azure Data Engineer | Infosys Limited  
+### Senior System Developer / Azure Data Engineer | Infosys Limited
 **November 2019 – April 2022 | Bangalore, India**
 
 Delivered developer support across multiple projects for international clients in Insurance (MetLife Inc.), Finance (Citi), and Technology (Apple Inc.) sectors.
 
-- Led Legacy System-to-Cloud migration projects using Azure Data Factory, automating batch files, optimizing Scala jobs, and rewriting Python code for Azure Databricks, delivering a 40% reduction [...]
+- Led Legacy System-to-Cloud migration projects using Azure Data Factory, automating batch files, optimizing Scala jobs, and rewriting Python code for Azure Databricks, delivering a 40% reduction in processing time and enabling real-time analytics capabilities.
 - Built Bronze layer ingestion pipelines in Azure Databricks to capture raw source data from legacy systems into ADLS Gen2 with schema enforcement and incremental loading strategies.
 - Optimized 15 SQL stored procedures and functions and restructured 215+ database tables, reducing process time by an additional 20%.
 - Designed data ingestion, transformation, and reporting frameworks using SSAS and SSIS, mapping source data to the Azure Synapse data warehouse.
@@ -80,13 +80,13 @@ Delivered developer support across multiple projects for international clients i
 - Authored LEX Platform Documentation for Azure best practices and developed historical/incremental load framework documentation.
 - Consistently rated 4.5/5 in appraisal cycles; earned High Performer Award for outstanding dedication and measurable improvements in data migration efficiency.
 
-**Technologies used:** PySpark, Scala, Azure Databricks, Azure Data Factory, Azure Synapse, Azure Blob Storage Gen2, Azure DevOps, Azure Key Vault, Snowflake, MySQL, SSMS, SSRS, SSIS, SSAS, Python[...]  
+**Technologies used:** PySpark, Scala, Azure Databricks, Azure Data Factory, Azure Synapse, Azure Blob Storage Gen2, Azure DevOps, Azure Key Vault, Snowflake, MySQL, SSMS, SSRS, SSIS, SSAS, Python, Power BI, SQL Server
 
 ---
 
 ## PROJECTS
 
-### End-to-End Data Engineering Portfolio | Self-Directed Professional Development  
+### End-to-End Data Engineering Portfolio | Self-Directed Professional Development
 **2025 – 2026 | GitHub: github.com/Mirel27/data-engineering-zoomcamp**
 
 Architected and delivered end-to-end data pipeline solutions spanning containerization (Docker), workflow orchestration (Kestra/Airflow), cloud data warehousing (BigQuery/GCP), batch processing (Apache Spark/PySpark), real-time streaming (Apache Kafka), infrastructure as code (Terraform/GCP), and analytics engineering (dbt) — demonstrating full-stack data engineering capability from ingestion to insight.
@@ -95,10 +95,10 @@ Architected and delivered end-to-end data pipeline solutions spanning containeri
 
 ## EDUCATION
 
-**Master of Science (MSc) — Data Science**  
+**Master of Science (MSc) — Data Science**
 The University of Sheffield | Sheffield, United Kingdom | 2022 – 2023
 
-**Bachelor of Engineering (B.E.) — Electronic and Telecommunication Engineering**  
+**Bachelor of Engineering (B.E.) — Electronic and Telecommunication Engineering**
 Goa University | Goa, India | 2015 – 2019
 
 ---
