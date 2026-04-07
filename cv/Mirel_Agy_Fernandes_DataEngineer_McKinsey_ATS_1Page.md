@@ -46,7 +46,7 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 
 ---
 
-## SELECTED PROJECTS
+## PROJECTS
 
 - **End-to-End Data Engineering Portfolio (2025–2026):** Reusable, production-grade pipeline templates — Docker, Kestra/Airflow, BigQuery/GCP, Spark, dbt, Terraform — designed as shareable internal assets. [github.com/Mirel27/data-engineering-zoomcamp](https://github.com/Mirel27/data-engineering-zoomcamp)
 - **NLP Depression Diagnosis Pipeline (MSc, 2023):** ML feature engineering and fine-tuning of BERT/MentalRoBERTa on Reddit & YouTube data; built end-to-end data pipeline for ML classification; F1 = 0.967; SHAP interpretability analysis. Python, HuggingFace, PyTorch.
