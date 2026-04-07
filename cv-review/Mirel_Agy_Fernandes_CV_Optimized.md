@@ -18,9 +18,9 @@ Data Engineer with 5+ years of experience building scalable, ML-ready data infra
 
 **Data Warehousing:** Snowflake, Azure Synapse Analytics, SQL Server
 
-**ETL / Orchestration:** Azure Data Factory, dbt, Apache Airflow [ASSUMED - PLEASE VERIFY], SSIS
+**ETL / Orchestration:** Azure Data Factory, dbt,, SSIS
 
-**Cloud Platforms:** Microsoft Azure (ADLS Gen2, Databricks, Synapse, Key Vault, Azure ML), AWS (S3, Glue [ASSUMED - PLEASE VERIFY])
+**Cloud Platforms:** Microsoft Azure (ADLS Gen2, Databricks, Synapse, Key Vault, Azure ML), AWS S3
 
 **Data Lakehouse & Architecture:** Medallion Architecture (Bronze/Silver/Gold), Dimensional Modeling, Star/Snowflake Schemas, Incremental & Historical Loading
 
@@ -98,22 +98,6 @@ Delivered data engineering solutions for Fortune 500 clients — **MetLife (Insu
 **The University of Sheffield** | Sheffield, UK | March 2023 – September 2023
 
 Supported 154 MSc Management students in data analysis and statistical methods using SPSS and Excel; conducted lab sessions and personal tutoring.
-
----
-
-## PROJECTS
-
-### Clinical Notes Anonymisation Pipeline | Imperial College Healthcare NHS Trust
-- Developed an end-to-end BERT-based NLP de-identification pipeline using Spark DataFrames and Snowflake, achieving 99% PII masking accuracy at 1M records/hour — a **1,000x throughput improvement**.
-- Architected for reproducibility and compliance with MIMIC-4 and GDPR standards.
-
-### Automated Data Validation Framework | Imperial College Healthcare NHS Trust
-- Built a Snowpark-based rule-based validation framework processing 180M records (20 columns) in under 1 minute with 100% PII leakage prevention.
-- Eliminated manual data quality checks through full automation.
-
-### Maternity and Fetal Linkage Data Model | Imperial College Healthcare NHS Trust
-- Engineered business logic to link maternity and fetal clinical records achieving **98% linkage accuracy** across multi-source EHR systems.
-
 ---
 
 ## LANGUAGES
