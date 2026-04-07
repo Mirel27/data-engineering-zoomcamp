@@ -1,12 +1,12 @@
 # MIREL AGY FERNANDES
 
-mirelagy27@gmail.com | +44 7867093713 | linkedin.com/in/mirel-agy-fernandes | London, United Kingdom
+mirelagy27@gmail.com | +44 7867093713 | linkedin.com/in/mirel-agy-fernandes | github.com/Mirel27 | London, United Kingdom
 
 ---
 
 ## PROFESSIONAL SUMMARY
 
-Data Engineer with 5+ years of experience designing scalable data platforms and building distributed ETL/ELT pipelines using Apache Spark, Snowflake, Azure, and dbt. Proven expertise processing large-scale clinical and financial datasets, implementing PII/GDPR-compliant data solutions, and delivering measurable performance improvements. Adept at collaborating with cross-functional teams, translating complex data requirements into robust engineering solutions, and driving data quality and observability across the full data lifecycle.
+Data Engineer with 5+ years of experience designing scalable data platforms and building distributed ETL/ELT pipelines using Apache Spark, Snowflake, Azure, and dbt. Proven expertise processing large-scale datasets, building analytical models, and delivering data solutions for research, enterprise, and public sector environments.
 
 ---
 
@@ -28,7 +28,9 @@ Data Quality and Observability: dbt tests, Great Expectations, automated validat
 
 Infrastructure and DevOps: Docker, Kubernetes, Terraform, Git, CI/CD, Azure DevOps
 
-Analytics and BI: Power BI, SSRS, SSAS, Qlik
+Analytics and BI: Power BI, SSRS, SSAS, Qlik, Matplotlib
+
+NLP and Data Science Libraries: pandas, spaCy, NLTK, NumPy
 
 Methodologies: Agile, Scrum, Technical Documentation, Stakeholder Management, Communication
 
@@ -39,15 +41,16 @@ Methodologies: Agile, Scrum, Technical Documentation, Stakeholder Management, Co
 ### Data Engineer | Imperial College Healthcare NHS Trust / Imperial College London
 **March 2024 – Present | London, United Kingdom**
 
-- Designed and deployed scalable ETL/ELT pipelines to extract Electronic Health Record (EHR) data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via Azure Data Factory, supporting clinical research across multiple NHS and academic projects.
-- Engineered a high-performance clinical notes anonymization pipeline using Apache Spark DataFrames, Snowflake Modin, and a BERT-based transformer model (MMIC-4 deidentification standard), achieving 2x throughput improvement and processing 500K+ records per run.
-- Built an automated data validation framework using Snowpark that validates 180M records (20 columns) in 1 minute, achieving 100% PII leakage prevention with near-zero human intervention across data pipelines.
+- Designed and deployed scalable ETL/ELT pipelines to extract Electronic Health Record (EHR) data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via Azure Data Factory, processing 180M+ records with full audit logging and GDPR compliance.
+- Engineered a high-performance clinical notes anonymization pipeline using Apache Spark DataFrames, Snowflake Modin, and a BERT-based transformer model (MMIC-4 deidentification standard), achieving industry-leading PII detection and redaction at scale.
+- Built an automated data validation framework using Snowpark that validates 180M records (20 columns) in 1 minute, achieving 100% PII leakage prevention with near-zero human intervention across data processing workflows.
 - Developed data models for 3 research projects including maternity and fetal linkage models (98% accuracy), reducing query times by 25% through strategic cluster key implementation in Snowflake.
 - Authored dbt transformation logic, test cases, and macros supporting both full and incremental loads, applying data quality checks and automated regression testing as part of the CI/CD pipeline.
 - Built fail-safe incremental loading framework with restart capability, handling Snowflake 16MB record-length limits via dynamic free-text splitting and fault-tolerant monitoring.
-- Leveraged Azure Machine Learning with GPT-4.0 API to extract insights from Snowflake data for automated discharge summary generation, measuring completeness, accuracy, readability, and bias of clinical documentation.
+- Leveraged Azure Machine Learning with GPT-4.0 API to extract insights from Snowflake data for automated discharge summary generation, measuring completeness, accuracy, readability, and bias of clinical content.
+- Developed analytical models using pandas, spaCy, NLTK, and NumPy, including incremental models that serve as the basis for Qlik and Matplotlib visualisations delivered to clients for data verification and validation.
 - Developed end-to-end monitoring, logging, and alerting dashboards to provide transparency into pipeline health and ensure consistent, reliable pipeline execution.
-- Collaborated effectively with a diverse cross-functional team including clinical researchers, clinicians, data scientists, data protection officers, ethics committees, and funders, ensuring delivery aligned with NHS governance and GDPR standards.
+- Collaborated effectively with a diverse cross-functional team including clinical researchers, clinicians, data scientists, data protection officers, ethics committees, and funders, ensuring delivery of trusted, research-ready datasets.
 - Managed code deployments and project priorities using Azure DevOps with CI/CD pipelines, applying Agile sprint methodology throughout.
 
 **Key Project Highlights:**
@@ -71,7 +74,7 @@ Methodologies: Agile, Scrum, Technical Documentation, Stakeholder Management, Co
 
 Delivered developer support across multiple projects for international clients in Insurance (MetLife Inc.), Finance (Citi), and Technology (Apple Inc.) sectors.
 
-- Led Legacy System-to-Cloud migration projects using Azure Data Factory, automating batch files, optimizing Scala jobs, and rewriting Python code for Azure Databricks, delivering a 40% reduction in processing time and enabling real-time analytics capabilities.
+- Led Legacy System-to-Cloud migration projects using Azure Data Factory, automating batch files, optimizing Scala jobs, and rewriting Python code for Azure Databricks, delivering a 40% reduction in processing time.
 - Built Bronze layer ingestion pipelines in Azure Databricks to capture raw source data from legacy systems into ADLS Gen2 with schema enforcement and incremental loading strategies.
 - Optimized 15 SQL stored procedures and functions and restructured 215+ database tables, reducing process time by an additional 20%.
 - Designed data ingestion, transformation, and reporting frameworks using SSAS and SSIS, mapping source data to the Azure Synapse data warehouse.
@@ -80,7 +83,7 @@ Delivered developer support across multiple projects for international clients i
 - Authored LEX Platform Documentation for Azure best practices and developed historical/incremental load framework documentation.
 - Consistently rated 4.5/5 in appraisal cycles; earned High Performer Award for outstanding dedication and measurable improvements in data migration efficiency.
 
-**Technologies used:** PySpark, Scala, Azure Databricks, Azure Data Factory, Azure Synapse, Azure Blob Storage Gen2, Azure DevOps, Azure Key Vault, Snowflake, MySQL, SSMS, SSRS, SSIS, SSAS, Python, Power BI, SQL Server
+**Technologies used:** PySpark, Scala, Azure Databricks, Azure Data Factory, Azure Synapse, Azure Blob Storage Gen2, Azure DevOps, Azure Key Vault, Snowflake, MySQL, SSMS, SSRS, SSIS, SSAS, Python, Power BI
 
 ---
 
@@ -89,7 +92,7 @@ Delivered developer support across multiple projects for international clients i
 ### End-to-End Data Engineering Portfolio | Self-Directed Professional Development
 **2025 – 2026 | GitHub: github.com/Mirel27/data-engineering-zoomcamp**
 
-Architected and delivered end-to-end data pipeline solutions spanning containerization (Docker), workflow orchestration (Kestra/Airflow), cloud data warehousing (BigQuery/GCP), batch processing (Apache Spark/PySpark), real-time streaming (Apache Kafka), infrastructure as code (Terraform/GCP), and analytics engineering (dbt) — demonstrating full-stack data engineering capability from ingestion to insight.
+Architected and delivered end-to-end data pipeline solutions spanning containerization (Docker), workflow orchestration (Kestra/Airflow), cloud data warehousing (BigQuery/GCP), batch processing (Apache Spark/dbt), and streaming (Kafka/Flink), demonstrating production-grade data engineering capabilities.
 
 ---
 
