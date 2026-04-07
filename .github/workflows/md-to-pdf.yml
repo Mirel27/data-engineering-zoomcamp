@@ -1,0 +1,40 @@
+name: Convert CV Markdown to PDF
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'cv/Mirel_Agy_Fernandes_DataEngineer_McKinsey_ATS_1Page.md'
+      - 'cv/cv-style.css'
+
+jobs:
+  convert-to-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: copilot/create-ats-optimized-cv
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf pandoc
+
+      - name: Convert Markdown to PDF
+        run: |
+          pandoc cv/Mirel_Agy_Fernandes_DataEngineer_McKinsey_ATS_1Page.md \
+            -o cv/Mirel_Agy_Fernandes_DataEngineer_McKinsey_ATS_1Page.pdf \
+            --pdf-engine=wkhtmltopdf \
+            --css cv/cv-style.css \
+            -V papersize=a4
+
+      - name: Commit and push PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cv/Mirel_Agy_Fernandes_DataEngineer_McKinsey_ATS_1Page.pdf
+          git diff --cached --quiet || git commit -m "chore: add single-page PDF version of CV"
+          git push

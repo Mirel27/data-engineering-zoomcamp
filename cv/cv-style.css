@@ -1,0 +1,8 @@
+@page { size: A4; margin: 8mm 12mm 8mm 12mm; }
+body { font-size: 8.5pt; font-family: Arial, sans-serif; line-height: 1.2; }
+h1 { font-size: 13pt; margin: 0 0 2px 0; }
+h2 { font-size: 9pt; margin: 4px 0 2px 0; border-bottom: 1px solid #000; }
+h3 { font-size: 8.5pt; margin: 3px 0 1px 0; }
+p, li { margin: 1px 0; }
+ul { margin: 2px 0; padding-left: 14px; }
+hr { margin: 3px 0; }

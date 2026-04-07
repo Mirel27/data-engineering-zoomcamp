@@ -26,19 +26,19 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 ### Data Engineer | Imperial College Healthcare NHS Trust / Imperial College London
 **March 2024 – Present | London, United Kingdom**
 
-- Designed and deployed scalable ETL/ELT pipelines extracting EHR data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via Snowpark, supporting 20+ research projects and enabling ML-ready data infrastructure.
-- Engineered a clinical notes anonymisation pipeline using Apache Spark and a BERT-based transformer (MMIC-4 standard), achieving 99.9% de-identification accuracy on millions of records.
-- Built an automated data validation framework (Snowpark) validating 180M records (20 columns) in 1 minute with 100% PII leakage prevention, ensuring ML-ready data quality.
-- Authored dbt transformation logic, test cases, and macros supporting both full and incremental loads, applying data quality checks and automated regression testing as part of the CI/CD pipeline.
-- Developed analytical models using pandas, spaCy, NLTK, and NumPy as the basis for Qlik and Matplotlib visualisations delivered to Data Scientists and research teams for data verification.
-- Leveraged Azure ML with GPT-4.0 API to extract insights from Snowflake data for automated discharge summary generation.
-- Enriched structured fields using Snowflake Cortex, increasing population from 60% to 90%; developed linkage models achieving 98% accuracy.
-- Collaborated with clinical researchers, Data Scientists, data protection officers, and senior stakeholders to translate business and research requirements into technical solutions and measurable outcomes.
+- Designed and deployed ETL/ELT pipelines extracting EHR data from 4 source systems (Cerner, Arya Radiology, Somerset Cancer, Nautilus BLOB) into Snowflake via Snowpark, supporting 20+ researchers.
+- Engineered a clinical notes anonymisation pipeline using Apache Spark and BERT (MMIC-4 standard), achieving 99.9% de-identification accuracy on millions of records.
+- Built an automated data validation framework (Snowpark) validating 180M records (20 columns) in 1 minute with 100% PII leakage prevention.
+- Authored dbt transformation logic, test cases, and macros for full and incremental loads with data quality checks and automated regression testing in CI/CD.
+- Developed analytical models (pandas, spaCy, NLTK, NumPy) as the basis for Qlik and Matplotlib visualisations delivered to Data Scientists for data verification.
+- Leveraged Azure ML with GPT-4.0 API for automated discharge summary generation from Snowflake data.
+- Enriched structured fields using Snowflake Cortex (60% → 90% population); developed linkage models achieving 98% accuracy.
+- Collaborated with clinical researchers, data protection officers, and senior stakeholders to translate requirements into technical solutions.
 
 ### Senior System Developer / Azure Data Engineer | Infosys Limited
 **November 2019 – April 2022 | Bangalore, India** *(Clients: MetLife, Citi, Apple)*
 
-- Delivered data engineering solutions in a fast-paced consulting model, managing technical delivery and stakeholder communication across enterprise clients (MetLife, Citi, Apple) from requirements to production.
+- Delivered data engineering solutions across enterprise clients (MetLife, Citi, Apple), managing technical delivery and stakeholder communication from requirements to production.
 - Led legacy-to-cloud migration using Azure Data Factory, Databricks, and PySpark/Scala, delivering 40% reduction in processing time.
 - Built Bronze layer ingestion pipelines in Azure Databricks into ADLS Gen2 with schema enforcement and incremental loading; contributed to reusable cross-client asset libraries.
 - Optimised 15 SQL stored procedures and 215+ tables, reducing process time by a further 20%.
@@ -48,8 +48,8 @@ Data Engineer with 5+ years of experience designing scalable data platforms and 
 
 ## PROJECTS
 
-- **End-to-End Data Engineering Portfolio (2025–2026):** Reusable, production-grade pipeline templates — Docker, Kestra/Airflow, BigQuery/GCP, Spark, dbt, Terraform — designed as shareable internal assets. [github.com/Mirel27/data-engineering-zoomcamp](https://github.com/Mirel27/data-engineering-zoomcamp)
-- **NLP Depression Diagnosis Pipeline (MSc, 2023):** ML feature engineering and fine-tuning of BERT/MentalRoBERTa on Reddit & YouTube data; built end-to-end data pipeline for ML classification; F1 = 0.967; SHAP interpretability analysis. Python, HuggingFace, PyTorch.
+- **End-to-End Data Engineering Portfolio (2025–2026):** Reusable, production-grade pipeline templates — Docker, Kestra/Airflow, BigQuery/GCP, Spark, dbt, Terraform. [github.com/Mirel27/data-engineering-zoomcamp](https://github.com/Mirel27/data-engineering-zoomcamp)
+- **NLP Depression Diagnosis Pipeline (MSc, 2023):** Fine-tuned BERT/MentalRoBERTa on Reddit & YouTube data; end-to-end ML pipeline; F1 = 0.967; SHAP interpretability. Python, HuggingFace, PyTorch.
 
 ---
 
