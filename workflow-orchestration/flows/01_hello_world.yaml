@@ -1,0 +1,78 @@
+# Flow - a container for tasks and their orchestration logic.
+# Tasks - the steps within a flow.
+# Inputs - dynamic values passed to the flow at runtime.
+# Outputs - pass data between tasks and flows.
+# Triggers - mechanism that automatically starts the execution of a flow.
+# Execution - a single run of a flow with a specific state.
+# Variables - key–value pairs that let you reuse values across tasks.
+# Plugin Defaults - default values applied to every task of a given type within one or more flows.
+# Concurrency - control how many executions of a flow can run at the same time.
+
+
+
+
+id: 01_hello_world
+namespace: zoomcamp  # id and namespace are required, they are used to identify the flow and to group it with other flows
+#they are immutable, you can't change them after the flow is created
+
+inputs:
+  - id: name
+    type: STRING
+    defaults: Will
+
+concurrency:
+  behavior: FAIL
+  limit: 2
+
+#How many instances of this flow can run at the same time, if the limit is reached, the behavior will be to fail the new instance, you can also set it to WAIT, in that case the new instance will wait until one of the running instances finishes before it starts
+# I am not writring multiple workflow writing to postgres at the same time, so I will set it to FAIL, but if you want to run multiple instances of the flow at the same time, you can set it to WAIT
+
+variables:
+  welcome_message: "Hello, {{ inputs.name }}!"
+  
+tasks:
+  - id: hello_message
+    type: io.kestra.plugin.core.log.Log
+    message: "{{ render(vars.welcome_message) }}"
+
+    #Renders it will evaluate all the expressions in the inner equations
+  
+  - id: generate_output
+    type: io.kestra.plugin.core.debug.Return
+    format: I was generated during this workflow.
+
+    #Returns a value that can be used in other tasks, it will be available in the outputs variable
+    #eg. in case of http request
+    #for example  if you want to get the body of the request and then pass it
+
+
+  - id: sleep
+    type: io.kestra.plugin.core.flow.Sleep
+    duration: PT15S
+
+  - id: log_output
+    type: io.kestra.plugin.core.log.Log
+    message: "This is an output: {{ outputs.generate_output.value }}"
+
+  - id: goodbye_message
+    type: io.kestra.plugin.core.log.Log
+    message: "Goodbye, {{ inputs.name }}!"
+
+pluginDefaults:
+  - type: io.kestra.plugin.core.log.Log
+    values:
+      level: ERROR
+
+      #Define default values for a plugin, so you don't have to repeat them in every task, for example if you want all your logs to be at the ERROR level, you can set it here and then you don't have to set it in every log task
+
+triggers:
+  - id: schedule
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 10 * * *"
+    inputs:
+      name: Sarah
+    disabled: true
+
+    #Define triggers to automatically start the flow, for example you can use a schedule trigger to run the flow every day at 10am, or you can use an http trigger to start the flow when an http request is received, you can also pass inputs to the flow when it is triggered, in this case we are passing the name input with the value Sarah, and we are disabling the trigger so it won't run until we enable it
+    #Event triggers are also available, they allow you to start the flow when a specific event occurs, for example when a file is uploaded to a storage bucket, or when a message is published to a message queue, you can also pass inputs to the flow when it is triggered by an event, for example you can pass the name of the file that was uploaded, or the content of the message that was published
+
